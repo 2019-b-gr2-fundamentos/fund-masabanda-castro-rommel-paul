@@ -59,3 +59,78 @@ if (casadoYMosero){
 // const seAtrasoAClase = celularDescargado == true ||
 // const seAtrasoAClase = celularDescargado == true ||  amaneceMuerto == true && estaActivadaLaAlarma != true  || estaEnModoSilencio == true
 //const seAtrasoAClase = celularDescargado ==true || amaneceMuerto  == true || estaActivadaLaAlarma != true|| estaActivadaLaAlarma != true || estaEnModoSilencio == true;
+
+//tryty
+const nombreVacio ="";
+if(""){
+    console.log("truty");
+}else{
+    console.log("falsy");
+}
+
+if("ad"){
+    console.log("truty");
+}else{
+    console.log("falsy");
+}
+
+if(123){
+    console.log("truty");
+}else{
+    console.log("falsy");
+}
+
+if(0){
+    console.log("truty");
+}else{
+    console.log("falsy");
+}
+
+if(undefined){              // falsy
+    console.log("truty");
+}else{
+    console.log("falsy");
+}
+
+const calculo = "sumar"; // sumar, restar, multiplicar, dividir
+switch(calculo){
+    case "sumar";           //1
+    break;
+    //codigo
+    case "restar";          //2   
+    break;
+    //codigo
+    case "multiplicar";     //3  
+    break;
+    //codigo
+    case "dividir";         //4
+    break;
+    //codigo
+    default;
+}
+
+// 6 Guagua
+// 18 Guambra
+// 65 Longo
+// 66 Ruku
+// no vale con switch ya que toma valores designados no un rango de valores 
+
+const edadString prompt ("ingrese la edad");
+const edad = Number (edadString);
+    if(edad>=0 && edad<= 6){
+        console.log("Guagua")
+    }else{
+        if(edadS<6 && edad <=18){
+            console.log("guambra")
+        else{
+                if(edad<18 && edad<=65){
+                    console.log("longo")
+                else{
+                         if(edad<65 && edad){
+                            console.log(ruku)
+                        else{
+                            console.log("esa no es una edad mmv")
+                }
+            }
+        }
+    }
