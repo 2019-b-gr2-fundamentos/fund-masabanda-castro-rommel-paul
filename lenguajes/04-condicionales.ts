@@ -115,22 +115,30 @@ switch(calculo){
 // 66 Ruku
 // no vale con switch ya que toma valores designados no un rango de valores 
 
-const edadString prompt ("ingrese la edad");
+
+
+const edadString = prompt ("ingrese una edad");
 const edad = Number (edadString);
-    if(edad>=0 && edad<= 6){
-        console.log("Guagua")
+if(edad >=0 && edad <=6){
+    console.log("Guagua");
+}else{
+    if(edad >=7 && edad <=18){
+        console.log("Guambra");
     }else{
-        if(edadS<6 && edad <=18){
-            console.log("guambra")
-        else{
-                if(edad<18 && edad<=65){
-                    console.log("longo")
-                else{
-                         if(edad<65 && edad){
-                            console.log(ruku)
-                        else{
-                            console.log("esa no es una edad mmv")
-                }
+        if(edad >=19 && edad <= 65){
+            console.log("Longo");
+        }else{
+            if(edad >=66 && edad <=140){
+                console.log("Ruku");
+            }else{
+                console.log("Ingrese una edad real");
             }
-        }
+        }   
     }
+}
+
+
+
+
+
+
