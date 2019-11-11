@@ -69,10 +69,10 @@ do{
             deberesAlgebra = deberesAlgebra + 1;
             console.log("# de deberes de algebra", deberesAlgebra);
         }else{
-            if(deberes %2 !==0){
+            if(deberes %2 ==1){
                 deberesAnalisis = deberesAnalisis + 1;
                 console.log("# de deberes de analisis", deberesAnalisis);
             }
         }
     }
-} while(deberes<50)
+} while(deberes<1000)
