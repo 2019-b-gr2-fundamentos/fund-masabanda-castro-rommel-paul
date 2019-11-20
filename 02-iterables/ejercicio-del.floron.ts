@@ -1,8 +1,9 @@
 // 1) crear un arreglo de 5 elemntos
-const elementosFloron = 0;
-for(let  elementosFloron = 5 ; elementosFloron >=0; elementosFloron ++){    
-}
-console.log(`elemento`, elementosFloron);
+const numerdoDeJugadores = prompt ("Ingrese el numero de jugadores");
+const numerdoDeJugadores2 = Number (numerdoDeJugadores);
+const numerdoDeJugadores3 = [numerdoDeJugadores2];
+
+
 
 
 
