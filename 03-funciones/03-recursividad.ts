@@ -14,7 +14,6 @@ function imrpimirMensajeNVeces(
 function main(){
     imrpimirMensajeNVeces (`hola`,8);
 }
-main()
 
 function detenerElArreglo(){
 
@@ -28,3 +27,10 @@ function arregloDeNumeros(){
     const elementos = [];
     elementos
 }
+
+
+//para que sea un arreglo de multiples dimensiones sus elementos deben ser arreglos
+
+
+
+

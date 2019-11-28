@@ -1,27 +1,3 @@
-//recursividad para repetir el codigo como un while o un for
-function imrpimirMensajeNVeces(mensaje, numeroVeces) {
-    if (numeroVeces == 0) {
-        console.log("Se Termino");
-    }
-    else {
-        console.log("hola");
-        var nuevoNumeroVeces = numeroVeces - 1;
-        imrpimirMensajeNVeces(mensaje, nuevoNumeroVeces);
-    }
-}
-function main() {
-    imrpimirMensajeNVeces("hola", 8);
-}
-function detenerElArreglo() {
-}
-/* PSEUDOCODIGO
-1) Dado un conjunto de numeros(arreglo)
-2) Imprimir cada elemento del conjunto(arreglo)
-*/
-function arregloDeNumeros() {
-    var elementos = [];
-    elementos;
-}
 //para que sea un arreglo de multiples dimensiones sus elementos deben ser arreglos
 var arregloDosDimensiones = [
     [1, 2, 3, 4],
@@ -45,9 +21,6 @@ arregloDosDimensiones[1][1];
 // ultimo elemento-1=penultimo del 2doarreglo
 //suma los elementos
 function tamañoDelArreglo(arregloDosDimensiones) {
-    return arregloDosDimensiones.length;
+    return arregloDosDimensiones[0].length;
 }
 console.log(tamañoDelArreglo);
-console.log(arregloDosDimensiones.length);
-console.log(arregloDosDimensiones[0]);
-main();
