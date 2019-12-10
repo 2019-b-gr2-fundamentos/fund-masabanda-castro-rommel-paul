@@ -7,7 +7,7 @@ main(){
     
  
   List<String>  gasesNobles;
-  gasesNobles = ["helio",null ,null ,null , null];
+  gasesNobles = ["helio","neon" ,"argon" ,"kripton" ];
   int operacion;
    do {
 
@@ -22,7 +22,7 @@ main(){
     if (operacion >=1 && operacion <= 2 ) {
       switch (operacion) {
         case 1:
-        gasesNobles.add("helio");
+        gasesNobles.add("xenon");
         print(gasesNobles);
           break;
 
@@ -47,6 +47,7 @@ main(){
       } 
 
       } while (operacion == 1 || operacion ==2 );
+      
 
     
 }
