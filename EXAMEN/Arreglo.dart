@@ -38,6 +38,8 @@ main(){
         print("incorrecto");
       }
       
+     // No es mucho pero es trabajo honesto 
+      
     } else {
       if (operacion == 3) {
         print("Nos vemos ");
