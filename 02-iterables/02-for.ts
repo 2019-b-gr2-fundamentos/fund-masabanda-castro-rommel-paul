@@ -63,3 +63,4 @@ const arreglo =[]
 //3) exista al menos un elemento "1"
 // ej:[0,0,0,0,0] no es valido
 // ej:[0,0,0,0,1]
+}
