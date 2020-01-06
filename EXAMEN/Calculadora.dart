@@ -16,8 +16,10 @@ int numeroDeOperacion;
       print("9 calculo de la distancia en un MRU");
       print("10 calculo del tiempo en un MRU");
       print("11 salir");
+
         stdout.write("Seleccione el numero de la operacion que desea realizar:");
         numeroDeOperacion = int.parse(stdin.readLineSync());
+
           if (numeroDeOperacion >=1 && numeroDeOperacion <=4){
             num a,b;
               stdout.write('Digite el primer numero:');
@@ -125,6 +127,6 @@ int numeroDeOperacion;
                   }
                 }
         }
-  }while ( numeroDeOperacion >=1 && numeroDeOperacion<=10); 
+  }while ( numeroDeOperacion >=1 && numeroDeOperacion <=10); 
 
 }  
