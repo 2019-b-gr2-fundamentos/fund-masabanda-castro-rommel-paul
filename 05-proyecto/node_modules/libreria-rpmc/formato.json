@@ -1,0 +1,17 @@
+{
+    "nombre":"Rommel",
+    "apellido":"Masabanda",
+    "edad": 20,
+    "casado": false,
+    "hijos": null,
+    "mascotas": ["oso"],
+    "primo":{
+        "nombre":"Paco",
+    "apellido":"Castro",
+    "edad": 20,
+    "casado": false,
+    "hijos": null,
+    "mascotas": ["oso"]
+
+    }
+}

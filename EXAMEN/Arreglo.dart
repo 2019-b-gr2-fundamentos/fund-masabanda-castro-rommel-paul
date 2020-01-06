@@ -1,9 +1,8 @@
-import 'dart:io';
-
 main(){
  
   List<String>  gasesNobles;
     gasesNobles = ["helio","neon" ,"argon" ,"kripton","xenon"];
+
 
 
   int operacion;
@@ -66,15 +65,8 @@ main(){
 // No es mucho pero es trabajo honesto. 
 
   
-      
 
-  
-      
-    
-    
-  
-    
-    
+
 
 
 
