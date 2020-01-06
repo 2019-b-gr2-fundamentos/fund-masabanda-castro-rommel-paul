@@ -3,6 +3,8 @@ main(){
   List<String>  gasesNobles;
     gasesNobles = ["helio","neon" ,"argon" ,"kripton","xenon"];
 
+
+
   int operacion;
     do {
       print("BIENVENIDO");
@@ -63,12 +65,6 @@ main(){
 // No es mucho pero es trabajo honesto. 
 
   
-
-
-
-
-
-
 
 
 
