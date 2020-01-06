@@ -1,0 +1,16 @@
+{
+  "name": "libreria-rpmc",
+  "version": "1.0.0",
+  "description": "libreria de fundamentos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "epn",
+    "libretia",
+    "ejemplo"
+  ],
+  "author": "rommel-masabanda",
+  "license": "ISC"
+}
