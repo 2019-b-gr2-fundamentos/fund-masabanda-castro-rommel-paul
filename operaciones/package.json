@@ -1,19 +1,17 @@
 {
-  "name": "operac-calcu",
+  "name": "calcu-operaciones",
   "version": "1.0.0",
-  "description": "libreria de fundamentos",
+  "description": "operaciones basicas de una calculadora",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "epn",
-    "libretia",
-    "ejemplo"
+    "operaciones",
+    "basicas",
+    "calculadora"
   ],
   "author": "rommel-masabanda",
-  "license": "ISC",
-  "directories": {
-    "lib": "lib"
-  }
+  "license": "ISC"
 }
