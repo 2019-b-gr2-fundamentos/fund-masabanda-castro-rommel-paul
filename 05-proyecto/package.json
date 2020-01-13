@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "libreria-rpmc": "^1.0.0"
+    "libreria-rpmc": "^1.0.0",
+    "operac-calcu": "^1.1.0"
   }
 }
