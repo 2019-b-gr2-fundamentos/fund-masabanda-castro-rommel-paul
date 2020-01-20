@@ -1,10 +1,11 @@
 // 02-crud.ts create read update delete
 //const prompts = requiere('prompts');
 import * as prompts from 'prompts';
-function main(){
-    obtenerDatosAnimalPerrito();
+import { RespuestaEdad } from './respuesta-edad.interface';
+import { RespuestaNombre } from './respuesra-nombre.interface';
 
-}
+
+/*
 function obtenerDatosAnimalPerrito(){
     //paradigma de programacion
     //sincrono vs asincrono
@@ -53,13 +54,56 @@ function obtenerDatosAnimalPerrito(){
 
     console.log('fin');
     
+}*/
+async function obtenerDatosAnimalPerritoSincrono(){
+    
+        //paradigma de programacion
+        //sincrono vs asincrono
+        console.log('inicio');
+        const preguntas = [
+            {
+            type: 'number',
+            name: 'edad',
+            message: 'puedes darme tu edad',
+            },
+            {
+            type: 'text',
+            name: 'nombre',
+            message: 'puedes darme tu nombre',
+            },
+            {
+            type: 'text',
+            name: 'cedula',
+            message: 'puedes darme tu cedula',
+            }
+                
+                                                            
+        
+        ]
+        const RespuestaEdad = await prompts(preguntas);
+        console.log('respuestaEdad', RespuestaEdad);
+        console.log('fin');
+    
+
+
+}
+function main(){
+    // npm unistall-g tsc -> WINDOWS
+    // npm install -g typescript -> WINDOWS
+    // sudp npm unis
+    //obtenerDatosAnimalPerrito();
+    obtenerDatosAnimalPerritoSincrono()
+    .then()
+    .catch(); // -> promesa // sincrona 
+
 }
 main();
+/*(20/01/20) la forma de programar de manera sincrono solo funciona dentro de funciones
 
+*/
 
 
 /*
 hay funciones q devuelven promesas (se puede o no cunmplir)
-
 
 */
