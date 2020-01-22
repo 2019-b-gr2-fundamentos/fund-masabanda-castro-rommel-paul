@@ -1,0 +1,15 @@
+{
+  "name": "07-archivos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "(tsc 01-archivo.ts -- target ES5 || echo) && node 01-archivo.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^13.1.8"
+  },
+  "dependencies": {}
+}
