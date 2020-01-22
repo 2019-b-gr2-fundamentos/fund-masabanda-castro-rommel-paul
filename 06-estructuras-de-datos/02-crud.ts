@@ -106,4 +106,25 @@ main();
 /*
 hay funciones q devuelven promesas (se puede o no cunmplir)
 
+(deber juego)
+
+(primer juego puzzle numeros, crear una matirz mediante el teclado le decimos al usuario que pieza quiere mover por ejemplo la posicion 11 a la posicion 21
+    solo pse puede mvoer una pieza a otra-----comparar una matriz
+    no solo guardar numeros si no una estructura de datos con numero y si esta oucpado
+    mostrar el tablero)
+
+(juego 2 una matriz con 1 y 0 los ocmplejo es colocar las candiciones para ganar dos jugadores qu coloquen la 
+    posicion)
+
+(juego 3 el ahoracado definir cuantas equivocaciones se puede tener---definir cuantas cosas se dibuja )
+
+(juego cuatro palitos---)
+
+(juego carta intermedia es una arreglo el cual se mezclara--se toma dos cartas se elije la opcion dentro o fuera-
+    se apuesta se gana o se mete al pozo)
+
+(juego cinco
+    )
+
 */
+
