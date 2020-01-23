@@ -1,1 +1,6 @@
-HOLA AMIGOSS
+[
+    {
+        "id":100,
+        "nombre": "pepito"
+    }
+]

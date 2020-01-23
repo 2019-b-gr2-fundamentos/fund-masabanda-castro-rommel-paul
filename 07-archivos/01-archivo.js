@@ -36,16 +36,20 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
+var _02_leer_archivo_1 = require("./02-leer-archivo");
 var prompts = require("prompts");
 // por cada funcion vamos a crear un archivo
 function main() {
     return __awaiter(this, void 0, void 0, function () {
-        var contador, arregloEstudiantes, arregloPreguntas, respuestaEstudianteUno, nuevoRegistroUno, respuestaEstudianteDos, nuevoRegistroDos, idABuscar, indiceEcontrado, nombreAEditar;
+        var contador, contenidoArchivo, arregloCargadoDeArchivo, arregloEstudiantes, arregloPreguntas, respuestaEstudianteUno, nuevoRegistroUno, respuestaEstudianteDos, nuevoRegistroDos, idABuscar, indiceEcontrado, nombreAEditar, buscar, estudinateEncontrado;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
                     contador = 1;
-                    arregloEstudiantes = [];
+                    contenidoArchivo = _02_leer_archivo_1.leerArchivo('./ejemplo.txt');
+                    console.log('contenidoArchivo', contenidoArchivo);
+                    arregloCargadoDeArchivo = JSON.parse(contenidoArchivo);
+                    arregloEstudiantes = arregloCargadoDeArchivo;
                     arregloPreguntas = [
                         {
                             type: 'text',
@@ -85,7 +89,7 @@ function main() {
                         console.log(valorActual);
                         console.log(indice);
                         console.log(arreglo);
-                        return valorActual.id == idABuscar;
+                        return valorActual.id == idABuscar.id; // nos devuelve le indice
                     });
                     console.log('Indice encontrado;', indiceEcontrado);
                     return [4 /*yield*/, prompts({
@@ -97,6 +101,18 @@ function main() {
                     nombreAEditar = _a.sent();
                     arregloEstudiantes[indiceEcontrado].nombre = nombreAEditar.nombre;
                     console.log(arregloEstudiantes);
+                    return [4 /*yield*/, prompts({
+                            type: 'text',
+                            name: 'nombre',
+                            message: 'Buscar por ID o por NOMBRE'
+                        })];
+                case 5:
+                    buscar = _a.sent();
+                    estudinateEncontrado = arregloEstudiantes
+                        .find(function (valorActual) {
+                        return valorActual.nombre == buscar.nombre;
+                    });
+                    console.log(estudinateEncontrado);
                     return [2 /*return*/];
             }
         });

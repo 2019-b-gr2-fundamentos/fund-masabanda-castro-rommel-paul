@@ -6,8 +6,14 @@ import * as prompts from 'prompts';
 async function main(){
 
     let contador = 1;
+    const contenidoArchivo = leerArchivo(
+        './ejemplo.txt'
+    );
+    console.log('contenidoArchivo', contenidoArchivo);
+    const arregloCargadoDeArchivo = JSON.parse(contenidoArchivo);
+    
 
-    const arregloEstudiantes: Estudinate[] = [];
+    const arregloEstudiantes: Estudinate[] = arregloCargadoDeArchivo;
     const arregloPreguntas = [
         {
             type:'text',
@@ -52,7 +58,7 @@ async function main(){
             console.log(valorActual);
             console.log(indice);
             console.log(arreglo);
-            return valorActual.id == idABuscar;
+            return valorActual.id == idABuscar.id;// nos devuelve le indice
         }
     )
     console.log('Indice encontrado;', indiceEcontrado);
@@ -73,7 +79,7 @@ async function main(){
       const estudinateEncontrado = arregloEstudiantes
       .find(
           function(valorActual){
-              return valorActual.nombre = buscar.nombre;
+              return valorActual.nombre == buscar.nombre;
           }
       );
       console.log(estudinateEncontrado);
