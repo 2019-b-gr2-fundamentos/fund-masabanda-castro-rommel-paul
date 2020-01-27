@@ -10,7 +10,33 @@ async function main(){
         './ejemplo.txt'
     );
     console.log('contenidoArchivo', contenidoArchivo);
-    const arregloCargadoDeArchivo = JSON.parse(contenidoArchivo);
+
+        let arregloCargadoDeArchivo; // undefined
+        try{
+            arregloCargadoDeArchivo = JSON.parse(' mama ');
+        } catch(error){
+           // arregloCargadoDeArchivo = [];
+            console.error('error parseando archivo');
+
+            throw new Error("El archivo esta mal parseado");
+        }
+        try{
+            console.log('1');
+            console.log('2');
+            console.log('3');
+         
+            //throw new Erorrooooo;
+            console.log('4');
+            console.log('5');
+   
+        }catch(error){
+            console.log(error);
+            console.log(':3')
+
+        }
+            
+        }
+  //operadores
     
 
     const arregloEstudiantes: Estudinate[] = arregloCargadoDeArchivo;
@@ -99,3 +125,10 @@ async function main(){
     //console.log(textoLeido + nuevoContenido);
 }
 main();
+ 
+//parsear -> texto -> estructura en memoria
+//(de un texto y transformarlo a una estructura en memoria)
+
+{
+
+}
