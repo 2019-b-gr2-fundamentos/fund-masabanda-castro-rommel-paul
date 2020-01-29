@@ -204,8 +204,9 @@ function main() {
                         case 1:
                             buscarGasA = _a.sent();
                             gasEncontrado = arregloGases.find(function (valorActual) {
-                                return console.log(valorActual.nombre == buscarGasA.nombre);
+                                return valorActual.nombre == buscarGasA.nombre;
                             });
+                            console.log(gasEncontrado);
                             return [4 /*yield*/, operaciones()];
                         case 2:
                             _a.sent();
