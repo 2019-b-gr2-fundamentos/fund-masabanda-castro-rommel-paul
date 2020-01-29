@@ -1,10 +1,11 @@
 export interface GasesNobles {
-
-    numeroAtomico: number;
+    id: number;
+    nombre: string;
     simbolo: string;
+    numeroAtomico: number;
     masaAtomica: number;
     estadosDeOxidacion: number;
-    electronegatividad: number;
+
 
 }
 

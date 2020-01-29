@@ -39,22 +39,79 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var prompts = require("prompts");
 console.log("Binvenido");
 console.log("Responda las siguientes preguntas");
-function elementos() {
+function main() {
     return __awaiter(this, void 0, void 0, function () {
+        function operaciones() {
+            return __awaiter(this, void 0, void 0, function () {
+                var operacionIngresada, _a;
+                return __generator(this, function (_b) {
+                    switch (_b.label) {
+                        case 0: return [4 /*yield*/, prompts({
+                                type: 'number',
+                                name: 'opcion',
+                                message: 'Ingrese el numero de la operacion que desea realizar: \n1. Agregar un elemento \n2. Editar un elemento \n3. Eliminar un elemento \n 4. Buscar un elemento, \n 5. salir'
+                            })];
+                        case 1:
+                            operacionIngresada = _b.sent();
+                            return [4 /*yield*/, operacionIngresada];
+                        case 2:
+                            _b.sent();
+                            _a = operacionIngresada.opcion;
+                            switch (_a) {
+                                case 1: return [3 /*break*/, 3];
+                                case 2: return [3 /*break*/, 5];
+                                case 3: return [3 /*break*/, 7];
+                                case 4: return [3 /*break*/, 9];
+                                case 5: return [3 /*break*/, 11];
+                            }
+                            return [3 /*break*/, 12];
+                        case 3: return [4 /*yield*/, agrgarElementos()];
+                        case 4:
+                            _b.sent();
+                            return [3 /*break*/, 13];
+                        case 5: return [4 /*yield*/, editarElementos()];
+                        case 6:
+                            _b.sent();
+                            return [3 /*break*/, 13];
+                        case 7: return [4 /*yield*/, eliminarElemento()];
+                        case 8:
+                            _b.sent();
+                            return [3 /*break*/, 13];
+                        case 9: return [4 /*yield*/, buscarGas()];
+                        case 10:
+                            _b.sent();
+                            return [3 /*break*/, 13];
+                        case 11:
+                            console.log("fin");
+                            return [3 /*break*/, 13];
+                        case 12: return [3 /*break*/, 13];
+                        case 13: return [2 /*return*/];
+                    }
+                });
+            });
+        }
         function agrgarElementos() {
             return __awaiter(this, void 0, void 0, function () {
-                var registroElementos;
+                var datoGases, respuesta;
                 return __generator(this, function (_a) {
                     switch (_a.label) {
                         case 0: return [4 /*yield*/, prompts(propiedades)];
                         case 1:
-                            registroElementos = _a.sent();
-                            arregloGases.push(registroElementos);
-                            opciones();
-                            return [4 /*yield*/, agrgarElementos];
+                            datoGases = _a.sent();
+                            respuesta = {
+                                id: contador,
+                                nombre: datoGases.nombre,
+                                simbolo: datoGases.simbolo,
+                                numeroAtomico: datoGases.numeroAtomico,
+                                masaAtomica: datoGases.masaAtomica,
+                                estadosDeOxidacion: datoGases.estadosDeOxidacion
+                            };
+                            arregloGases.push(respuesta);
+                            console.log(arregloGases[contador - 1]);
+                            contador = contador + 1;
+                            return [4 /*yield*/, operaciones()];
                         case 2:
                             _a.sent();
-                            console.log(arregloGases);
                             return [2 /*return*/];
                     }
                 });
@@ -62,143 +119,142 @@ function elementos() {
         }
         function editarElementos() {
             return __awaiter(this, void 0, void 0, function () {
-                var indice, propiedadEditar, valorNuevo, elementoElegido;
+                var indice, indiceEncontrado, indiceActualizado, editado, respuestaEditada;
                 return __generator(this, function (_a) {
                     switch (_a.label) {
                         case 0: return [4 /*yield*/, prompts({
                                 type: 'number',
-                                name: 'indice',
-                                message: 'ingrese el indice del la propiedad que desea editar'
+                                name: 'id',
+                                message: 'ingrese el indice que desea editar'
                             })];
                         case 1:
                             indice = _a.sent();
-                            if (!(indice.indice < arregloGases.length)) return [3 /*break*/, 7];
-                            return [4 /*yield*/, prompts({
-                                    type: 'text',
-                                    name: 'propiedad',
-                                    message: 'que desea editar'
-                                })];
+                            indiceEncontrado = arregloGases.findIndex(function (valorActual, ind, arreglo) {
+                                return valorActual.id == indice.id;
+                            });
+                            indiceActualizado = indiceEncontrado + 1;
+                            return [4 /*yield*/, prompts(propiedades)];
                         case 2:
-                            propiedadEditar = _a.sent();
-                            if (!(propiedadEditar.propiedad == 'numeroAtomico'
-                                || propiedadEditar.propiedad == 'simbolo'
-                                || propiedadEditar.propiedad == 'masaAtomica'
-                                || propiedadEditar.propiedad == 'electronegatividad'
-                                || propiedadEditar.propiedad == 'estadosDeOxidacion')) return [3 /*break*/, 5];
-                            return [4 /*yield*/, prompts({
-                                    type: 'text',
-                                    name: 'valor',
-                                    message: 'Ingrese la nueva informacion'
-                                })];
+                            editado = _a.sent();
+                            respuestaEditada = {
+                                id: indiceActualizado,
+                                nombre: editado.nombre,
+                                simbolo: editado.simbolo,
+                                numeroAtomico: editado.numeroAtomico,
+                                masaAtomica: editado.masaAtomica,
+                                estadosDeOxidacion: editado.estadosDeOxidacion,
+                            };
+                            arregloGases[indiceEncontrado] = respuestaEditada;
+                            console.log(respuestaEditada);
+                            return [4 /*yield*/, operaciones()];
                         case 3:
-                            valorNuevo = _a.sent();
-                            elementoElegido = arregloGases[indice.indice];
-                            switch (propiedadEditar.propiedad) {
-                                case 'numeroAtomico':
-                                    elementoElegido.numeroAtomico = valorNuevo.valor;
-                                    break;
-                                case 'simbolo':
-                                    elementoElegido.simbolo = valorNuevo.valor;
-                                    break;
-                                case 'masaAtomica':
-                                    elementoElegido.masaAtomica = valorNuevo.valor;
-                                    break;
-                                case 'electronegatividad':
-                                    elementoElegido.electronegatividad = valorNuevo.valor;
-                                    break;
-                                case 'estadosDeOxidacion':
-                                    elementoElegido.estadosDeOxidacion = valorNuevo.valor;
-                                    break;
-                            }
-                            opciones();
-                            return [4 /*yield*/, editarElementos];
-                        case 4:
                             _a.sent();
-                            console.log(arregloGases);
-                            return [3 /*break*/, 6];
-                        case 5:
-                            console.log("debe ingresar el nombre correctamente");
-                            editarElementos();
-                            _a.label = 6;
-                        case 6: return [3 /*break*/, 8];
-                        case 7:
-                            console.log('el indice ingresado es erroneo');
-                            editarElementos();
-                            _a.label = 8;
-                        case 8: return [2 /*return*/];
-                    }
-                });
-            });
-        }
-        function opciones() {
-            return __awaiter(this, void 0, void 0, function () {
-                var opciones;
-                return __generator(this, function (_a) {
-                    switch (_a.label) {
-                        case 0: return [4 /*yield*/, prompts({
-                                type: 'text',
-                                name: 'eleccion',
-                                message: 'digite le numero de la operacion que desea realizar \n 1. agregar un elemento \n 2. editar un elemento \n 3. salir'
-                            })];
-                        case 1:
-                            opciones = _a.sent();
-                            return [4 /*yield*/, opciones];
-                        case 2:
-                            _a.sent();
-                            switch (opciones.eleccion) {
-                                case '1':
-                                    agrgarElementos();
-                                    break;
-                                case '2':
-                                    editarElementos();
-                                    break;
-                                case '3':
-                                    console.log(agrgarElementos);
-                                    break;
-                                default:
-                                    console.log("su ingreso es incorrecto");
-                                    opciones();
-                                    break;
-                            }
                             return [2 /*return*/];
                     }
                 });
             });
         }
-        var arregloGases, propiedades;
+        function eliminarElemento() {
+            return __awaiter(this, void 0, void 0, function () {
+                var Buscar, indiceEncontrado, Vacio;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            console.log(arregloGases);
+                            return [4 /*yield*/, prompts({
+                                    type: 'number',
+                                    name: 'id',
+                                    message: 'ingresa el id del elemento que desea eliminar'
+                                })];
+                        case 1:
+                            Buscar = _a.sent();
+                            indiceEncontrado = arregloGases.findIndex(function (valorActual) {
+                                return valorActual.id == Buscar.id;
+                            });
+                            Vacio = {
+                                id: indiceEncontrado + 1,
+                                nombre: '',
+                                simbolo: '',
+                                numeroAtomico: '',
+                                masaAtomica: '',
+                                estadosDeOxidacion: ''
+                            };
+                            if (indiceEncontrado != -1) {
+                                arregloGases.splice(indiceEncontrado, 1, Vacio);
+                                console.log(Vacio);
+                            }
+                            return [4 /*yield*/, operaciones()];
+                        case 2:
+                            _a.sent();
+                            return [2 /*return*/];
+                    }
+                });
+            });
+        }
+        function buscarGas() {
+            return __awaiter(this, void 0, void 0, function () {
+                var buscarGasA, gasEncontrado;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0: return [4 /*yield*/, prompts({
+                                type: 'number',
+                                name: 'nombre',
+                                message: 'Puede buscar por ID '
+                            })];
+                        case 1:
+                            buscarGasA = _a.sent();
+                            gasEncontrado = arregloGases.find(function (valorActual) {
+                                return console.log(valorActual.nombre == buscarGasA.nombre);
+                            });
+                            return [4 /*yield*/, operaciones()];
+                        case 2:
+                            _a.sent();
+                            return [2 /*return*/];
+                    }
+                });
+            });
+        }
+        var arregloGases, contador, propiedades;
         return __generator(this, function (_a) {
-            arregloGases = [];
-            propiedades = [
-                {
-                    type: 'number',
-                    name: 'numeroAtomico',
-                    message: 'Ingrese el numero atomico del elemento'
-                },
-                {
-                    type: 'text',
-                    name: 'simbolo',
-                    message: 'Ingrese el simbolo del elemento'
-                },
-                {
-                    type: 'number',
-                    name: 'masaAtomica',
-                    message: 'Ingrese la masa atomica del elemento'
-                },
-                {
-                    type: 'number',
-                    name: 'estadosDeOxidacion',
-                    message: 'Ingrese el estado de oxidacion del elemento'
-                },
-                {
-                    type: 'number',
-                    name: 'electronegatividad',
-                    message: 'Ingrese la electronegatividad del elemento'
-                }
-            ];
-            ;
-            agrgarElementos();
-            return [2 /*return*/];
+            switch (_a.label) {
+                case 0:
+                    arregloGases = [];
+                    contador = 1;
+                    propiedades = [
+                        {
+                            type: 'text',
+                            name: 'nombre',
+                            message: 'Ingrese el nombre del elemento'
+                        },
+                        {
+                            type: 'text',
+                            name: 'simbolo',
+                            message: 'Ingrese el simbolo del elemento'
+                        },
+                        {
+                            type: 'number',
+                            name: 'numeroAtomico',
+                            message: 'Ingrese el numero atomica del elemento'
+                        },
+                        {
+                            type: 'number',
+                            name: 'masaAtomica',
+                            message: 'Ingrese la masa atomica del elemento'
+                        },
+                        {
+                            type: 'number',
+                            name: 'estadosDeOxidacion',
+                            message: 'Ingrese un estado de oxidacion del elemento'
+                        }
+                    ];
+                    return [4 /*yield*/, agrgarElementos()];
+                case 1:
+                    _a.sent();
+                    ;
+                    operaciones();
+                    return [2 /*return*/];
+            }
         });
     });
 }
-elementos();
+main().then().catch();

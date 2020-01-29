@@ -1,25 +1,28 @@
 import * as prompts from 'prompts';
 import {GasesNobles,} from './interfaces/gases-nobles'
 
-
-
 console.log("Binvenido");
 console.log("Responda las siguientes preguntas");
-async function elementos (){
 
-    
-    
-    const arregloGases: GasesNobles[] = [];
+async function main ()
+{
+    let arregloGases: GasesNobles[] = [];
+    let contador = 1;
     const propiedades = [
         {
-            type: 'number',
-            name: 'numeroAtomico',
-            message: 'Ingrese el numero atomico del elemento'
+            type: 'text',
+            name: 'nombre',
+            message: 'Ingrese el nombre del elemento'
         },
         {
             type: 'text',
             name: 'simbolo',
             message: 'Ingrese el simbolo del elemento'
+        },
+        {
+            type: 'number',
+            name: 'numeroAtomico',
+            message: 'Ingrese el numero atomica del elemento'
         },
         {
             type: 'number',
@@ -29,106 +32,153 @@ async function elementos (){
         {
             type: 'number',
             name: 'estadosDeOxidacion',
-            message: 'Ingrese el estado de oxidacion del elemento'
-        },
-        {
-            type: 'number',
-            name: 'electronegatividad',
-            message: 'Ingrese la electronegatividad del elemento'
+            message: 'Ingrese un estado de oxidacion del elemento'
         }    
     ]
+    
+    await agrgarElementos();
+
+    async function operaciones()
+    {   
+        let operacionIngresada = await prompts
+        ({
+            type: 'number',
+            name: 'opcion',
+            message: 'Ingrese el numero de la operacion que desea realizar: \n1. Agregar un elemento \n2. Editar un elemento \n3. Eliminar un elemento \n 4. Buscar un elemento, \n 5. salir'
+        });
+        await operacionIngresada;
+        switch (operacionIngresada.opcion) {
+            case 1:
+                await agrgarElementos();
+                break;
+            case 2:
+                await editarElementos();
+                break;
+            case 3:
+                await eliminarElemento();
+                break;
+            case 4:
+               await buscarGas();
+               break;
+            case 5:
+                console.log("fin");
+                break; 
+                               
+            default:
+                
+                break;
+            
+        }
+       
+    };
+
 
    async function agrgarElementos (){
-       let registroElementos: GasesNobles = await prompts(propiedades);
-       arregloGases.push(registroElementos);
-        opciones();
-        await agrgarElementos;
-        console.log(arregloGases);
+
+        let datoGases = await prompts(propiedades);
+        const respuesta = 
+        {
+            id: contador,
+            nombre: datoGases.nombre,
+            simbolo: datoGases.simbolo,
+            numeroAtomico: datoGases.numeroAtomico,
+            masaAtomica: datoGases.masaAtomica,
+            estadosDeOxidacion: datoGases.estadosDeOxidacion
+
+        };
+        
+        arregloGases.push(respuesta);
+        console.log(arregloGases[contador-1]);
+        contador = contador +1;
+        await operaciones();
+       
    }
 
    async function editarElementos(){
-       let indice = await prompts({
+
+       let indice = await prompts(
+        {
            type: 'number',
-           name: 'indice',
-           message: 'ingrese el indice del la propiedad que desea editar'
-       })
-       if(indice.indice < arregloGases.length){
-           let propiedadEditar = await prompts({
-               type: 'text',
-               name:'propiedad',
-               message:'que desea editar'
-           })
+           name: 'id',
+           message: 'ingrese el indice que desea editar'
+       });
+       const indiceEncontrado = arregloGases.findIndex(
+           function(valorActual,ind,arreglo){
+               return valorActual.id == indice.id;
+           }
+           
+       );
+       let indiceActualizado = indiceEncontrado + 1;
+           let editado = await prompts(propiedades);
+           const respuestaEditada ={
+               id: indiceActualizado,
+               nombre:editado.nombre,
+               simbolo:editado.simbolo,
+               numeroAtomico:editado.numeroAtomico,
+               masaAtomica:editado.masaAtomica,
+               estadosDeOxidacion:editado.estadosDeOxidacion,
+           };
+        arregloGases[indiceEncontrado] = respuestaEditada;
+        
+        console.log(respuestaEditada);
+        await operaciones();
+    }
 
-           if(propiedadEditar.propiedad == 'numeroAtomico'
-           || propiedadEditar.propiedad == 'simbolo'
-           || propiedadEditar.propiedad == 'masaAtomica'
-           || propiedadEditar.propiedad == 'electronegatividad'
-           || propiedadEditar.propiedad == 'estadosDeOxidacion'){
-               let valorNuevo = await prompts ({
-                   type: 'text',
-                   name: 'valor',
-                   message: 'Ingrese la nueva informacion'
-               })
-               let elementoElegido = arregloGases[indice.indice]
-                switch (propiedadEditar.propiedad) {
-                    case 'numeroAtomico':
-                        elementoElegido.numeroAtomico = valorNuevo.valor
-                        break;
-                    case 'simbolo':
-                        elementoElegido.simbolo = valorNuevo.valor
-                        break;
-                    case 'masaAtomica':
-                        elementoElegido.masaAtomica = valorNuevo.valor
-                        break;
-                    case 'electronegatividad':
-                        elementoElegido.electronegatividad = valorNuevo.valor
-                        break;
-                    case 'estadosDeOxidacion':
-                        elementoElegido.estadosDeOxidacion = valorNuevo.valor
-                        break;
-                }
-                opciones();
-                await editarElementos;
-                console.log(arregloGases);
+    async function eliminarElemento(){
+        console.log(arregloGases);
 
-            }else{
-                console.log("debe ingresar el nombre correctamente");
-                editarElementos()
+        const Buscar = await prompts(
+            {
+                type: 'number',
+                name: 'id',
+                message: 'ingresa el id del elemento que desea eliminar'
             }
-            }else{
-                console.log('el indice ingresado es erroneo');
-                editarElementos()
+        );
+
+        const indiceEncontrado = arregloGases.findIndex( 
+            function(valorActual){     
+                return valorActual.id == Buscar.id; 
             } 
-       };
-       async function opciones (){
-           let opciones = await prompts({
-               type: 'text',
-               name:'eleccion',
-               message: 'digite le numero de la operacion que desea realizar \n 1. agregar un elemento \n 2. editar un elemento \n 3. salir'
-           });
-           await opciones;
-           switch (opciones.eleccion){
-               case '1':
-                   agrgarElementos();
-                   
-                   break;
-                case '2':
-                    editarElementos();
-                    break;
-                case '3':
-                    console.log(agrgarElementos);
-                    break;
-                default:
-                    console.log("su ingreso es incorrecto");
-                    opciones();
-                    break;
-           }
-          
+        );
+     
+        const Vacio = 
+        {   
+           id:indiceEncontrado + 1 ,
+           nombre: '',
+           simbolo: '',
+           numeroAtomico: '', 
+           masaAtomica: '',
+           estadosDeOxidacion: ''
+        };
+        
+        if(indiceEncontrado != -1){
+            arregloGases.splice(indiceEncontrado , 1 , Vacio);
+            console.log(Vacio);
         }
-        agrgarElementos();
-           }
-elementos();
-                
+
+        await operaciones();
+    }
+async function buscarGas(){
+    
+        const buscarGasA = await prompts({
+            type: 'number',
+            name: 'nombre',
+            message:'Puede buscar por ID '
+        });
+        const gasEncontrado = arregloGases.find(
+            function(valorActual){
+                return valorActual.nombre == buscarGasA.nombre;
+            }
+        );
+        console.log(gasEncontrado);
+        await operaciones();
+    }
+    
+
+    operaciones();
+
+}
+main().then().catch();
            
        
    
