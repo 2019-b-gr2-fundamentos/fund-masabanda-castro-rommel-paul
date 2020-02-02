@@ -1,0 +1,14 @@
+{
+  "name": "galleta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "(tsc galletita.ts --target ES5 || echo) && node galletita.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prompts": "^2.3.0"
+  }
+}
