@@ -1,0 +1,13 @@
+[{"id":0,
+"nombre":"Helio",
+"simbolo":"He",
+"numeroAtomico":2,
+"masaAtomica":4,
+"estadosDeOxidacion":0},
+
+{"id":1,
+"nombre":"Neon",
+"simbolo":"Ne",
+"numeroAtomico":10,
+"masaAtomica":20,
+"estadosDeOxidacion":0}]

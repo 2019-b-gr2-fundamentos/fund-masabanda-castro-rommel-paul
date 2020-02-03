@@ -1,12 +1,13 @@
 import * as prompts from 'prompts';
-import {GasesNobles,} from './interfaces/gases-nobles'
+import {GasesNobles,} from './interfaces/gases-nobles';
+import { leerArchivo } from './02-leer-archivo';
 
 console.log("Binvenido");
 console.log("Responda las siguientes preguntas");
 
 async function main ()
 {
-    let arregloGases: GasesNobles[] = [];
+    let arregloGases: GasesNobles[] = [JSON.parse(leerArchivo('./ejemplo.txt'))];
     let contador = 1;
     const propiedades = [
         {

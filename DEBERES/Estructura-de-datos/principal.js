@@ -37,6 +37,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var prompts = require("prompts");
+var _02_leer_archivo_1 = require("./02-leer-archivo");
 console.log("Binvenido");
 console.log("Responda las siguientes preguntas");
 function main() {
@@ -219,7 +220,7 @@ function main() {
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
-                    arregloGases = [];
+                    arregloGases = [JSON.parse(_02_leer_archivo_1.leerArchivo('./ejemplo.txt'))];
                     contador = 1;
                     propiedades = [
                         {
