@@ -1,7 +1,6 @@
 //function compararMatriz(matrizUno: number[][], matrizDos: number[][]): boolean
   //  let matrizA = matr
-    let contA = 1;
-    let contB = 1;
+    
     const matriz1 = [
         [1,1],
         [1,1],
@@ -13,7 +12,7 @@
         [1,1],
     ]
     const matriz2 = [
-        [1,1],
+        [0,0],
         [1,1],
         [1,1],
         [1,1],
@@ -23,12 +22,29 @@
         [1,1],
     ]
 
-        for (var i=0; i< matriz1.length; i ++){
-            for(var j = 0; j< matriz1[0].length; j++)
-            {
-                matriz1[i][j] = contA;
-                contA ++;
+    let soniguales =1;
+
+        for (let i = 0; i < 8; i ++){
+            for(let j = 0; j < 2 ; j++){
+            
+                let valorMatriz1 = matriz1[i][j];
+                let valorMatriz2 = matriz2[i][j];
+
+                if (valorMatriz1 != valorMatriz2) {
+                    soniguales = 0;
+                }         
+            }
         }
+        if(soniguales){
+            console.log("son iguales");
+        }else{
+            console.log("son diferentes");
+        }
+
+
+
+
+/*        }
         for (var f =0; f< matriz2.length; f++){
             for(var c = 0; j< matriz2[0].length; c++)
             {
@@ -43,7 +59,7 @@
     } else {
         console.log("diferentes");                        
     }
-
+*/
 //}
 
 //let funciona = compararMatriz(matriz1, matriz2);
