@@ -1,3 +1,4 @@
 export interface movimientoEjeX {
-    ejeX: number
+    eje1X: number,
+    eje2X: number
 }

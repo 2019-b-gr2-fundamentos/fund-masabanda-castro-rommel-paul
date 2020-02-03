@@ -37,7 +37,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var prompts = require("prompts");
-function moviminetoEjeX() {
+function moviminetoEje1X() {
     return __awaiter(this, void 0, void 0, function () {
         var coordenadaX, respuestaCoordenadaX;
         return __generator(this, function (_a) {
@@ -45,16 +45,37 @@ function moviminetoEjeX() {
                 case 0:
                     coordenadaX = {
                         type: 'number',
-                        name: 'ejeX',
-                        message: 'Ingrese el valor de la coordenada en x \n Recuerde solo se admite valores de 0 a 3 =)',
+                        name: 'eje1X',
+                        message: 'Ingrese el valor de la coordenada en x1 \n Recuerde solo se admite valores de 0 a 3 =)',
                         validate: function (value) { return (value >= 0 && value <= 3); }
                     };
                     return [4 /*yield*/, prompts(coordenadaX)];
                 case 1:
                     respuestaCoordenadaX = _a.sent();
-                    return [2 /*return*/, respuestaCoordenadaX.ejeX];
+                    return [2 /*return*/, respuestaCoordenadaX.eje1X];
             }
         });
     });
 }
-exports.moviminetoEjeX = moviminetoEjeX;
+exports.moviminetoEje1X = moviminetoEje1X;
+function moviminetoEje2X() {
+    return __awaiter(this, void 0, void 0, function () {
+        var coordenadaX, respuestaCoordenadaX;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    coordenadaX = {
+                        type: 'number',
+                        name: 'eje2X',
+                        message: 'Ingrese el valor de la coordenada en x2 \n Recuerde solo se admite valores de 0 a 3 =)',
+                        validate: function (value) { return (value >= 0 && value <= 3); }
+                    };
+                    return [4 /*yield*/, prompts(coordenadaX)];
+                case 1:
+                    respuestaCoordenadaX = _a.sent();
+                    return [2 /*return*/, respuestaCoordenadaX.eje2X];
+            }
+        });
+    });
+}
+exports.moviminetoEje2X = moviminetoEje2X;

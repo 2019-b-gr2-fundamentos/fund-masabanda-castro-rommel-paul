@@ -41,17 +41,20 @@ var movimientoEjeY_1 = require("./funciones/movimientoEjeY");
 var sentido_v_o_h_1 = require("./funciones/sentido-v-o-h");
 function main() {
     return __awaiter(this, void 0, void 0, function () {
-        var numA, numB, horizontalovertical, puntitos;
+        var numA, numj, numB, horizontalovertical, puntitos;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, moviminetoEjeX_1.moviminetoEjeX()];
+                case 0: return [4 /*yield*/, moviminetoEjeX_1.moviminetoEje1X()];
                 case 1:
                     numA = _a.sent();
-                    return [4 /*yield*/, movimientoEjeY_1.movimientoEjeY()];
+                    return [4 /*yield*/, moviminetoEjeX_1.moviminetoEje2X()];
                 case 2:
+                    numj = _a.sent();
+                    return [4 /*yield*/, movimientoEjeY_1.movimientoEjeY()];
+                case 3:
                     numB = _a.sent();
                     return [4 /*yield*/, sentido_v_o_h_1.sentidoDelMovim()];
-                case 3:
+                case 4:
                     horizontalovertical = _a.sent();
                     puntitos = [
                         [1, 1, 1, 1],

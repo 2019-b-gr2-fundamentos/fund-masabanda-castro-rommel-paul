@@ -1,3 +1,4 @@
 export interface movimientoEjeY {
-    ejeY: number,
+    eje1Y: number,
+    eje2Y: number
 }
