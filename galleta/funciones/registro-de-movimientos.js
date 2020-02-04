@@ -36,46 +36,16 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var prompts = require("prompts");
-function moviminetoEje1X() {
+function registroMovimientos(n1, n2, n3, n4) {
     return __awaiter(this, void 0, void 0, function () {
-        var coordenadaX, respuestaCoordenadaX;
+        var matrizdeMovientos;
         return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    coordenadaX = {
-                        type: 'number',
-                        name: 'eje1X',
-                        message: 'Ingrese el valor de la coordenada en X1 \n Recuerde solo se admite valores de 0 a 3 =)',
-                        validate: function (value) { return (value >= 0 && value <= 3); }
-                    };
-                    return [4 /*yield*/, prompts(coordenadaX)];
-                case 1:
-                    respuestaCoordenadaX = _a.sent();
-                    return [2 /*return*/, respuestaCoordenadaX.eje1X];
-            }
+            matrizdeMovientos = [
+                [n1, n2],
+                [n3, n4]
+            ];
+            return [2 /*return*/, matrizdeMovientos];
         });
     });
 }
-exports.moviminetoEje1X = moviminetoEje1X;
-function moviminetoEje2X() {
-    return __awaiter(this, void 0, void 0, function () {
-        var coordenadaX, respuestaCoordenadaX;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    coordenadaX = {
-                        type: 'number',
-                        name: 'eje2X',
-                        message: 'Ingrese el valor de la coordenada en X2 \n Recuerde solo se admite valores de 0 a 3 =)',
-                        validate: function (value) { return (value >= 0 && value <= 3); }
-                    };
-                    return [4 /*yield*/, prompts(coordenadaX)];
-                case 1:
-                    respuestaCoordenadaX = _a.sent();
-                    return [2 /*return*/, respuestaCoordenadaX.eje2X];
-            }
-        });
-    });
-}
-exports.moviminetoEje2X = moviminetoEje2X;
+exports.registroMovimientos = registroMovimientos;

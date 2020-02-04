@@ -36,33 +36,35 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var moviminetoEjeX_1 = require("./funciones/moviminetoEjeX");
-var movimientoEjeY_1 = require("./funciones/movimientoEjeY");
-var sentido_v_o_h_1 = require("./funciones/sentido-v-o-h");
+var jugador_1 = require("./funciones/jugador");
+var nombre_1 = require("./funciones/nombre");
+var comparar_matrices_1 = require("./funciones/comparar-matrices");
 function main() {
     return __awaiter(this, void 0, void 0, function () {
-        var numA, numj, numB, horizontalovertical, puntitos;
+        var turnos, a, b, cero;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, moviminetoEjeX_1.moviminetoEje1X()];
+                case 0:
+                    turnos = 0;
+                    return [4 /*yield*/, nombre_1.Bienvenida()];
                 case 1:
-                    numA = _a.sent();
-                    return [4 /*yield*/, moviminetoEjeX_1.moviminetoEje2X()];
+                    _a.sent();
+                    return [4 /*yield*/, nombre_1.Name1()];
                 case 2:
-                    numj = _a.sent();
-                    return [4 /*yield*/, movimientoEjeY_1.movimientoEjeY()];
+                    _a.sent();
+                    return [4 /*yield*/, nombre_1.Name2()];
                 case 3:
-                    numB = _a.sent();
-                    return [4 /*yield*/, sentido_v_o_h_1.sentidoDelMovim()];
+                    _a.sent();
+                    return [4 /*yield*/, jugador_1.jugador().catch().then()];
                 case 4:
-                    horizontalovertical = _a.sent();
-                    puntitos = [
-                        [1, 1, 1, 1],
-                        [0, 0, 0, 1],
-                        [0, 0, 0, 0],
-                        [0, 0, 0, 0]
-                    ];
-                    console.log(puntitos.length[1]);
+                    a = _a.sent();
+                    return [4 /*yield*/, jugador_1.jugador().catch().then()];
+                case 5:
+                    b = _a.sent();
+                    return [4 /*yield*/, comparar_matrices_1.compararMatriz(a, b).catch().then()];
+                case 6:
+                    cero = _a.sent();
+                    console.log(cero);
                     return [2 /*return*/];
             }
         });

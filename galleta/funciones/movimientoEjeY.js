@@ -37,7 +37,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var prompts = require("prompts");
-function movimientoEjeY() {
+function movimientoEje1Y() {
     return __awaiter(this, void 0, void 0, function () {
         var coordenadaY, respuestaCoordenadaY;
         return __generator(this, function (_a) {
@@ -45,16 +45,37 @@ function movimientoEjeY() {
                 case 0:
                     coordenadaY = {
                         type: 'number',
-                        name: 'ejeY',
-                        message: 'Ingrese el valor de la coordenada en Y \n Recuerde solo se admite valores de 0 a 3',
+                        name: 'eje1Y',
+                        message: 'Ingrese el valor de la coordenada en Y1 \n Recuerde solo se admite valores de 0 a 3',
                         validate: function (value) { return (value >= 0 && value <= 3); }
                     };
                     return [4 /*yield*/, prompts(coordenadaY)];
                 case 1:
                     respuestaCoordenadaY = _a.sent();
-                    return [2 /*return*/, respuestaCoordenadaY.ejeY];
+                    return [2 /*return*/, respuestaCoordenadaY.eje1Y];
             }
         });
     });
 }
-exports.movimientoEjeY = movimientoEjeY;
+exports.movimientoEje1Y = movimientoEje1Y;
+function movimientoEje2Y() {
+    return __awaiter(this, void 0, void 0, function () {
+        var coordenadaY, respuestaCoordenadaY;
+        return __generator(this, function (_a) {
+            switch (_a.label) {
+                case 0:
+                    coordenadaY = {
+                        type: 'number',
+                        name: 'eje2Y',
+                        message: 'Ingrese el valor de la coordenada en Y1 \n Recuerde solo se admite valores de 0 a 3',
+                        validate: function (value) { return (value >= 0 && value <= 3); }
+                    };
+                    return [4 /*yield*/, prompts(coordenadaY)];
+                case 1:
+                    respuestaCoordenadaY = _a.sent();
+                    return [2 /*return*/, respuestaCoordenadaY.eje2Y];
+            }
+        });
+    });
+}
+exports.movimientoEje2Y = movimientoEje2Y;

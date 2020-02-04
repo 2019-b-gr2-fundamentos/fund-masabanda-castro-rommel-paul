@@ -36,46 +36,33 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var prompts = require("prompts");
-function moviminetoEje1X() {
+var moviminetoEjeX_1 = require("../funciones/moviminetoEjeX");
+var movimientoEjeY_1 = require("../funciones/movimientoEjeY");
+var registro_de_movimientos_1 = require("../funciones/registro-de-movimientos");
+function jugador() {
     return __awaiter(this, void 0, void 0, function () {
-        var coordenadaX, respuestaCoordenadaX;
+        var num1x, num2x, num1y, num2y, matrix;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0:
-                    coordenadaX = {
-                        type: 'number',
-                        name: 'eje1X',
-                        message: 'Ingrese el valor de la coordenada en X1 \n Recuerde solo se admite valores de 0 a 3 =)',
-                        validate: function (value) { return (value >= 0 && value <= 3); }
-                    };
-                    return [4 /*yield*/, prompts(coordenadaX)];
+                case 0: return [4 /*yield*/, moviminetoEjeX_1.moviminetoEje1X()];
                 case 1:
-                    respuestaCoordenadaX = _a.sent();
-                    return [2 /*return*/, respuestaCoordenadaX.eje1X];
+                    num1x = _a.sent();
+                    return [4 /*yield*/, moviminetoEjeX_1.moviminetoEje2X()];
+                case 2:
+                    num2x = _a.sent();
+                    return [4 /*yield*/, movimientoEjeY_1.movimientoEje1Y()];
+                case 3:
+                    num1y = _a.sent();
+                    return [4 /*yield*/, movimientoEjeY_1.movimientoEje2Y()];
+                case 4:
+                    num2y = _a.sent();
+                    return [4 /*yield*/, registro_de_movimientos_1.registroMovimientos(num1x, num2x, num1y, num2y)];
+                case 5:
+                    matrix = _a.sent();
+                    console.log(matrix);
+                    return [2 /*return*/, matrix];
             }
         });
     });
 }
-exports.moviminetoEje1X = moviminetoEje1X;
-function moviminetoEje2X() {
-    return __awaiter(this, void 0, void 0, function () {
-        var coordenadaX, respuestaCoordenadaX;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    coordenadaX = {
-                        type: 'number',
-                        name: 'eje2X',
-                        message: 'Ingrese el valor de la coordenada en X2 \n Recuerde solo se admite valores de 0 a 3 =)',
-                        validate: function (value) { return (value >= 0 && value <= 3); }
-                    };
-                    return [4 /*yield*/, prompts(coordenadaX)];
-                case 1:
-                    respuestaCoordenadaX = _a.sent();
-                    return [2 /*return*/, respuestaCoordenadaX.eje2X];
-            }
-        });
-    });
-}
-exports.moviminetoEje2X = moviminetoEje2X;
+exports.jugador = jugador;
