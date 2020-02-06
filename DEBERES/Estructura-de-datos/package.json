@@ -1,17 +1,14 @@
 {
-  "name": "gases-nobles",
+  "name": "arreglo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "(tsc principal.ts --target ES5 || echo) && node principal.js"
+    "test": "(tsc new.ts --target ES5 ||echo) && node new.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "prompts": "^2.3.0"
-  },
-  "devDependencies": {
-    "@types/prompts": "^2.0.3"
   }
 }

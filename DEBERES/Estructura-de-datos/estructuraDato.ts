@@ -5,10 +5,4 @@ export interface GasesNobles {
     numeroAtomico: number;
     masaAtomica: number;
     estadosDeOxidacion: number;
-
-
-}
-
-export interface numeroDeOpcion{
-    opcion: number;
 }

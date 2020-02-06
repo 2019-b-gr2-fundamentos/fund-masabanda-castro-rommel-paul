@@ -1,0 +1,1 @@
+[null,"",{"id":1,"nombre":"neon","simbolo":"ne","numeroAtomico":18,"masaAtomica":20,"estadosDeOxidacion":0}]
