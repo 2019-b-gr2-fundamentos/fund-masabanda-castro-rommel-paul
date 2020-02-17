@@ -3,21 +3,27 @@ import { Bienvenida, Name1, Name2} from "./funciones/nombre";
 import { jugador1 } from "./funciones/jugador1";
 import { jugador2 } from "./funciones/jugador2";
 import { generarLinea } from "./funciones/dibujarTrazo";
+import { score } from "./funciones/puntaje";
+import { leer } from "./funciones/leerLogo";
 
 async function main(){
-    
+    const archivo = leer('./logo.txt');
+    console.log(archivo);
     await Bienvenida();
 
     
     let nombre1 = await Name1();
-    let nombre11 = ("jugador1");
+    let nombre11 = ("Jugador-1");
     console.log(nombre1);
 
     let nombre2 = await Name2();
+    let nombre22 = ("Jugador-2");
     console.log(nombre2);
 
     let arregloMovimientosTotales = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24];
     console.log("Movimientos disponibles:", arregloMovimientosTotales);
+
+    console.log("///////////////////////////////////////////////////////////////////////////////////////////"); 
 
     console.log("Es el turno de:", nombre11);
     let a = await jugador1();
@@ -26,11 +32,9 @@ async function main(){
     generarLinea(a);
     console.log("Movimientos disponibles:",arregloMovimientosTotales);
 
-    let arregloCambiadoA = arregloMovimientosTotales
-    
     console.log("///////////////////////////////////////////////////////////////////////////////////////////"); 
 
-    console.log("Es el turno de:", nombre2);
+    console.log("Es el turno de:", nombre22);
 
     let b = await jugador2();
 
@@ -39,6 +43,8 @@ async function main(){
     console.log("Movimientos disponibles:",arregloMovimientosTotales);
     
     let arregloCambiadoB = arregloMovimientosTotales
+
+    console.log("///////////////////////////////////////////////////////////////////////////////////////////"); 
 
     console.log("Es el turno de:", nombre11);
     
@@ -50,7 +56,9 @@ async function main(){
     
     let arregloCambiadoC = arregloMovimientosTotales
 
-    console.log("Es el turno de:", nombre2);
+    console.log("///////////////////////////////////////////////////////////////////////////////////////////"); 
+
+    console.log("Es el turno de:", nombre22);
     let d = await jugador2();
 
     arregloMovimientosTotales.splice(d-1,1,0);
@@ -58,6 +66,8 @@ async function main(){
     console.log("Movimientos disponibles:",arregloMovimientosTotales);
     
     let arregloCambiadoD = arregloMovimientosTotales
+
+    console.log("///////////////////////////////////////////////////////////////////////////////////////////"); 
 
     console.log("Es el turno de:", nombre11);
     let e = await jugador1();
@@ -68,7 +78,9 @@ async function main(){
     
     let arregloCambiadoE = arregloMovimientosTotales
 
-    console.log("Es el turno de:", nombre2);
+    console.log("///////////////////////////////////////////////////////////////////////////////////////////"); 
+
+    console.log("Es el turno de:", nombre22);
 
     let f = await jugador2();
 
@@ -77,6 +89,8 @@ async function main(){
     console.log("Movimientos disponibles:",arregloMovimientosTotales);
     
     let arregloCambiadoF = arregloMovimientosTotales
+
+    console.log("///////////////////////////////////////////////////////////////////////////////////////////"); 
 
     console.log("Es el turno de:", nombre11);
     let g = await jugador1();
@@ -87,7 +101,9 @@ async function main(){
     
     let arregloCambiadoG = arregloMovimientosTotales
 
-    console.log("Es el turno de:", nombre2);
+    console.log("///////////////////////////////////////////////////////////////////////////////////////////"); 
+
+    console.log("Es el turno de:", nombre22);
 
     let h = await jugador2();
 
@@ -96,6 +112,8 @@ async function main(){
     console.log("Movimientos disponibles:",arregloMovimientosTotales);
     
     let arregloCambiadoH = arregloMovimientosTotales
+
+    console.log("///////////////////////////////////////////////////////////////////////////////////////////"); 
 
     console.log("Es el turno de:", nombre11);
     let i = await jugador1();
@@ -106,7 +124,9 @@ async function main(){
     
     let arregloCambiadoI = arregloMovimientosTotales
 
-    console.log("Es el turno de:", nombre2);
+    console.log("///////////////////////////////////////////////////////////////////////////////////////////"); 
+
+    console.log("Es el turno de:", nombre22);
 
     let j = await jugador2();
 
@@ -115,6 +135,8 @@ async function main(){
     console.log("Movimientos disponibles:",arregloMovimientosTotales);
     
     let arregloCambiadoJ = arregloMovimientosTotales
+
+    console.log("///////////////////////////////////////////////////////////////////////////////////////////"); 
 
     console.log("Es el turno de:", nombre11);
     let k = await jugador1();
@@ -125,7 +147,9 @@ async function main(){
     
     let arregloCambiadoK = arregloMovimientosTotales
 
-    console.log("Es el turno de:", nombre2);
+    console.log("///////////////////////////////////////////////////////////////////////////////////////////"); 
+
+    console.log("Es el turno de:", nombre22);
 
     let l = await jugador2();
 
@@ -134,6 +158,8 @@ async function main(){
     console.log("Movimientos disponibles:",arregloMovimientosTotales);
     
     let arregloCambiadoL = arregloMovimientosTotales
+
+    console.log("///////////////////////////////////////////////////////////////////////////////////////////"); 
 
     console.log("Es el turno de:", nombre11);
     let m = await jugador1();
@@ -144,7 +170,9 @@ async function main(){
     
     let arregloCambiadoM = arregloMovimientosTotales
 
-    console.log("Es el turno de:", nombre2);
+    console.log("///////////////////////////////////////////////////////////////////////////////////////////"); 
+
+    console.log("Es el turno de:", nombre22);
 
     let n = await jugador2();
 
@@ -153,6 +181,8 @@ async function main(){
     console.log("Movimientos disponibles:",arregloMovimientosTotales);
     
     let arregloCambiadoN = arregloMovimientosTotales
+
+    console.log("///////////////////////////////////////////////////////////////////////////////////////////"); 
 
     console.log("Es el turno de:", nombre11);
     let o = await jugador1();
@@ -163,7 +193,9 @@ async function main(){
     
     let arregloCambiadoO = arregloMovimientosTotales
 
-    console.log("Es el turno de:", nombre2);
+    console.log("///////////////////////////////////////////////////////////////////////////////////////////"); 
+
+    console.log("Es el turno de:", nombre22);
 
     let p = await jugador2();
 
@@ -172,6 +204,8 @@ async function main(){
     console.log("Movimientos disponibles:",arregloMovimientosTotales);
     
     let arregloCambiadoP = arregloMovimientosTotales
+
+    console.log("///////////////////////////////////////////////////////////////////////////////////////////"); 
 
     console.log("Es el turno de:", nombre11);
     let q = await jugador1();
@@ -182,7 +216,9 @@ async function main(){
     
     let arregloCambiadoQ = arregloMovimientosTotales
 
-    console.log("Es el turno de:", nombre2);
+    console.log("///////////////////////////////////////////////////////////////////////////////////////////"); 
+
+    console.log("Es el turno de:", nombre22);
 
     let r = await jugador2();
 
@@ -191,6 +227,8 @@ async function main(){
     console.log("Movimientos disponibles:",arregloMovimientosTotales);
     
     let arregloCambiadoR = arregloMovimientosTotales
+
+    console.log("///////////////////////////////////////////////////////////////////////////////////////////"); 
 
     console.log("Es el turno de:", nombre11);
     let s = await jugador1();
@@ -201,7 +239,9 @@ async function main(){
     
     let arregloCambiadoS = arregloMovimientosTotales
 
-    console.log("Es el turno de:", nombre2);
+    console.log("///////////////////////////////////////////////////////////////////////////////////////////"); 
+
+    console.log("Es el turno de:", nombre22);
 
     let t = await jugador2();
 
@@ -210,9 +250,9 @@ async function main(){
     console.log("Movimientos disponibles:",arregloMovimientosTotales);
     
     let arregloCambiadoT = arregloMovimientosTotales
-    console.log("///////////////////////////////////////////////////////////////////////////");
-    console.log("ARREGLO CAMBIADO",arregloCambiadoT);
 
+    console.log("///////////////////////////////////////////////////////////////////////////////////////////"); 
+    
     console.log("Es el turno de:", nombre11);
     let u = await jugador1();
     
@@ -222,7 +262,9 @@ async function main(){
     
     let arregloCambiadoU = arregloMovimientosTotales
 
-    console.log("Es el turno de:", nombre2);
+    console.log("///////////////////////////////////////////////////////////////////////////////////////////"); 
+
+    console.log("Es el turno de:", nombre22);
 
     let v = await jugador2();
 
@@ -231,6 +273,8 @@ async function main(){
     console.log("Movimientos disponibles:",arregloMovimientosTotales);
     
     let arregloCambiadoV = arregloMovimientosTotales
+
+    console.log("///////////////////////////////////////////////////////////////////////////////////////////"); 
     
     console.log("Es el turno de:", nombre11);
     let w = await jugador1();
@@ -241,7 +285,9 @@ async function main(){
     
     let arregloCambiadoW = arregloMovimientosTotales
 
-    console.log("Es el turno de:", nombre2);
+    console.log("///////////////////////////////////////////////////////////////////////////////////////////"); 
+
+    console.log("Es el turno de:", nombre22);
 
     let x = await jugador2();
 
@@ -252,14 +298,11 @@ async function main(){
     let arregloCambiadoX = arregloMovimientosTotales
 
     console.log("///////////////////////////////////////////////////////////////////////////");
-    console.log("PRIMIER ARREGLO QUE CAMBIAMOS",arregloCambiadoA);
+    score();    
+    console.log("///////////////////////////////////////////////////////////////////////////");
 
-    console.log("Es el turno de:", nombre11);
+    const archivoFin = leer('./logoGameOver.txt');
+    console.log(archivoFin);
     
-    console.log("Game Over");
-    
-
-    
-
 }
 main();

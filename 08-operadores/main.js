@@ -66,7 +66,7 @@ function main() {
     // recibimps -> un valor
     var respuestaReduce = arregloEstudiantes
         .reduce(function (acumulador, valorActual) {
-        var calculo = acumulador - valorActual.nota;
+        var calculo = acumulador + valorActual.nota;
         return calculo;
     }, 0 // valor inical del acumulador
     );

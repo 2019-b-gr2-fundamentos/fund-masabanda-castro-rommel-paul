@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "(tsc 01-main.ts --target ES5 || echo) && node 01-main.js"
+    "test": "(tsc main.ts --target ES5 || echo) && node main.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "prompts": "^2.3.1"
+  }
 }
