@@ -36,46 +36,23 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var prompts = require("prompts");
-function movimientoEje1Y() {
+var moviminetoEjeX_1 = require("./moviminetoEjeX");
+var registro_de_movimientos_1 = require("./registro-de-movimientos");
+function jugador1() {
     return __awaiter(this, void 0, void 0, function () {
-        var coordenadaY, respuestaCoordenadaY;
+        var num1x, matrix;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0:
-                    coordenadaY = {
-                        type: 'number',
-                        name: 'eje1Y',
-                        message: 'Ingrese el valor de la coordenada en Y1 \n Recuerde solo se admite valores de 0 a 3',
-                        validate: function (value) { return (value >= 0 && value <= 3); }
-                    };
-                    return [4 /*yield*/, prompts(coordenadaY)];
+                case 0: return [4 /*yield*/, moviminetoEjeX_1.moviminetoEje1X()];
                 case 1:
-                    respuestaCoordenadaY = _a.sent();
-                    return [2 /*return*/, respuestaCoordenadaY.eje1Y];
+                    num1x = _a.sent();
+                    return [4 /*yield*/, registro_de_movimientos_1.registroMovimientos(num1x)];
+                case 2:
+                    matrix = _a.sent();
+                    console.log("Su movimiento fue la linea", matrix);
+                    return [2 /*return*/, matrix];
             }
         });
     });
 }
-exports.movimientoEje1Y = movimientoEje1Y;
-function movimientoEje2Y() {
-    return __awaiter(this, void 0, void 0, function () {
-        var coordenadaY, respuestaCoordenadaY;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    coordenadaY = {
-                        type: 'number',
-                        name: 'eje2Y',
-                        message: 'Ingrese el valor de la coordenada en Y1 \n Recuerde solo se admite valores de 0 a 3',
-                        validate: function (value) { return (value >= 0 && value <= 3); }
-                    };
-                    return [4 /*yield*/, prompts(coordenadaY)];
-                case 1:
-                    respuestaCoordenadaY = _a.sent();
-                    return [2 /*return*/, respuestaCoordenadaY.eje2Y];
-            }
-        });
-    });
-}
-exports.movimientoEje2Y = movimientoEje2Y;
+exports.jugador1 = jugador1;

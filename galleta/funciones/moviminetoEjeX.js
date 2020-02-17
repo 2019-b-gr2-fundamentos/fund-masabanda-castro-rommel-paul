@@ -46,8 +46,8 @@ function moviminetoEje1X() {
                     coordenadaX = {
                         type: 'number',
                         name: 'eje1X',
-                        message: 'Ingrese el valor de la coordenada en X1 \n Recuerde solo se admite valores de 0 a 3 =)',
-                        validate: function (value) { return (value >= 0 && value <= 3); }
+                        message: 'Ingrese el numero de la recta que desee trazar',
+                        validate: function (value) { return (value >= 1 && value <= 24); }
                     };
                     return [4 /*yield*/, prompts(coordenadaX)];
                 case 1:
@@ -58,24 +58,3 @@ function moviminetoEje1X() {
     });
 }
 exports.moviminetoEje1X = moviminetoEje1X;
-function moviminetoEje2X() {
-    return __awaiter(this, void 0, void 0, function () {
-        var coordenadaX, respuestaCoordenadaX;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0:
-                    coordenadaX = {
-                        type: 'number',
-                        name: 'eje2X',
-                        message: 'Ingrese el valor de la coordenada en X2 \n Recuerde solo se admite valores de 0 a 3 =)',
-                        validate: function (value) { return (value >= 0 && value <= 3); }
-                    };
-                    return [4 /*yield*/, prompts(coordenadaX)];
-                case 1:
-                    respuestaCoordenadaX = _a.sent();
-                    return [2 /*return*/, respuestaCoordenadaX.eje2X];
-            }
-        });
-    });
-}
-exports.moviminetoEje2X = moviminetoEje2X;

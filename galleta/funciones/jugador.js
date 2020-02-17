@@ -37,27 +37,21 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var moviminetoEjeX_1 = require("../funciones/moviminetoEjeX");
-var movimientoEjeY_1 = require("../funciones/movimientoEjeY");
 var registro_de_movimientos_1 = require("../funciones/registro-de-movimientos");
+var sentido_v_o_h_1 = require("./sentido-v-o-h");
 function jugador() {
     return __awaiter(this, void 0, void 0, function () {
-        var num1x, num2x, num1y, num2y, matrix;
+        var num1x, horiOVert, matrix;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0: return [4 /*yield*/, moviminetoEjeX_1.moviminetoEje1X()];
                 case 1:
                     num1x = _a.sent();
-                    return [4 /*yield*/, moviminetoEjeX_1.moviminetoEje2X()];
+                    return [4 /*yield*/, sentido_v_o_h_1.sentidoDelMovim()];
                 case 2:
-                    num2x = _a.sent();
-                    return [4 /*yield*/, movimientoEjeY_1.movimientoEje1Y()];
+                    horiOVert = _a.sent();
+                    return [4 /*yield*/, registro_de_movimientos_1.registroMovimientos(num1x, horiOVert)];
                 case 3:
-                    num1y = _a.sent();
-                    return [4 /*yield*/, movimientoEjeY_1.movimientoEje2Y()];
-                case 4:
-                    num2y = _a.sent();
-                    return [4 /*yield*/, registro_de_movimientos_1.registroMovimientos(num1x, num2x, num1y, num2y)];
-                case 5:
                     matrix = _a.sent();
                     console.log(matrix);
                     return [2 /*return*/, matrix];

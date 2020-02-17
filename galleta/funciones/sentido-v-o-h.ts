@@ -6,7 +6,7 @@ export async function sentidoDelMovim(){
     {
         type: 'number',
         name: 'sentidoDelMovimiento',
-        message: 'Ingrese 0 para (horizontal), o 1 para (vertical) \n asi marca el sentido de su jugada.',
+        message: 'Establesca el sentido de su recta \n 0 para (horizontal), o 1 para (vertical)',
         validate: value => (value == 0 || value == 1 )
     }
     const respuestaSentidoMovimiento:sentidoMovimiento = await prompts(SentidoMovimiento);

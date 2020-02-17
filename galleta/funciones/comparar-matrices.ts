@@ -1,4 +1,4 @@
-export async function compararMatriz(matrizUno: number[][], matrizDos: number[][]) {
+export async function comparar(matrizUno: number[][], matrizDos: number[][]) {
  
 
     let soniguales =1;

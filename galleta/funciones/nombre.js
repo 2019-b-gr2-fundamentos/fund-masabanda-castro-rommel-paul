@@ -82,22 +82,25 @@ function Name2() {
     });
 }
 exports.Name2 = Name2;
+;
 function Bienvenida() {
     console.log(".:Bienvenidos al juego de la Galletita:.\n");
     console.log('NOTA !!!!!');
-    console.log('Indicar las coordenadas en X y en Y para trazar la linea !!!');
+    console.log('Debe ingresar el numero de la linea que desea trazar');
     console.log('Tablero\n');
-    console.log("     0,0    0,1    0,2    0,3 ");
-    console.log("      . ____ . ____ . ____ .  ");
-    console.log("     │ │    │ │    │ │    │ │ ");
-    console.log("     │ │    │ │    │ │    │ │ ");
-    console.log("1,0  │. ---- . ---- . ---- .│ ");
-    console.log("     │ │    │ │    │ │    │ │ ");
-    console.log("     │ │    │ │    │ │    │ │ ");
-    console.log("2,0  │. ---- . ---- . ---- .│ ");
-    console.log("     │ │    │ │    │ │    │ │ ");
-    console.log("     │ │    │ │    │ │    │ │ ");
-    console.log("3,0  │. ---- . ---- . ---- .│ ");
+    console.log("|----1----|----2----|----3----|");
+    console.log("|         |         |         |");
+    console.log("4         5         6         7");
+    console.log("|         |         |         |");
+    console.log("|----8----|----9----|----10---|");
+    console.log("|         |         |         |");
+    console.log("11        12        13        14");
+    console.log("|         |         |         |");
+    console.log("|----15---|----16---|----17---|");
+    console.log("|         |         |         |");
+    console.log("18        19        20        21");
+    console.log("|         |         |         |");
+    console.log("|----22---|----23---|----24---|");
 }
 exports.Bienvenida = Bienvenida;
 ;

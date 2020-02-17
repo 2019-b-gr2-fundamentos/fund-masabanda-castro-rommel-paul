@@ -36,68 +36,23 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-function comparar(matrizUno, matrizDos) {
+var moviminetoEjeX_1 = require("./moviminetoEjeX");
+var registro_de_movimientos_1 = require("./registro-de-movimientos");
+function jugador2() {
     return __awaiter(this, void 0, void 0, function () {
-        var soniguales, i, j, valorMatriz1, valorMatriz2;
+        var num1x, matrix;
         return __generator(this, function (_a) {
-            soniguales = 1;
-            for (i = 0; i < 8; i++) {
-                for (j = 0; j < 2; j++) {
-                    valorMatriz1 = matrizUno[i][j];
-                    valorMatriz2 = matrizDos[i][j];
-                    if (valorMatriz1 != valorMatriz2) {
-                        soniguales = 0;
-                    }
-                }
+            switch (_a.label) {
+                case 0: return [4 /*yield*/, moviminetoEjeX_1.moviminetoEje1X()];
+                case 1:
+                    num1x = _a.sent();
+                    return [4 /*yield*/, registro_de_movimientos_1.registroMovimientos(num1x)];
+                case 2:
+                    matrix = _a.sent();
+                    console.log(matrix);
+                    return [2 /*return*/, matrix];
             }
-            if (soniguales) {
-                console.log("son iguales");
-            }
-            else {
-                console.log("son diferentes");
-            }
-            return [2 /*return*/, soniguales];
         });
     });
 }
-exports.comparar = comparar;
-var matriz1 = [
-    [1, 1],
-    [1, 1],
-    [1, 1],
-    [1, 1],
-    [1, 1],
-    [1, 1],
-    [1, 1],
-    [1, 1],
-];
-var matriz2 = [
-    [1, 1],
-    [1, 1],
-    [1, 1],
-    [1, 1],
-    [1, 1],
-    [1, 1],
-    [1, 1],
-    [1, 1],
-];
-compararMatriz(matriz1, matriz2);
-/*        }
-        for (var f =0; f< matriz2.length; f++){
-            for(var c = 0; j< matriz2[0].length; c++)
-            {
-                matriz2[f][c] = contB;
-                contB ++;
-            }
-        }
-    }
-    if (matriz1[i][j] == matriz2[f][c]) {
-
-        console.log("iguales");
-    } else {
-        console.log("diferentes");
-    }
-*/
-//}
-//let funciona = compararMatriz(matriz1, matriz2);
-//console.log(funciona);
+exports.jugador2 = jugador2;

@@ -36,14 +36,11 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-function registroMovimientos(n1, n2, n3, n4) {
+function registroMovimientos(n1) {
     return __awaiter(this, void 0, void 0, function () {
         var matrizdeMovientos;
         return __generator(this, function (_a) {
-            matrizdeMovientos = [
-                [n1, n2],
-                [n3, n4]
-            ];
+            matrizdeMovientos = n1;
             return [2 /*return*/, matrizdeMovientos];
         });
     });
